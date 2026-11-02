@@ -1,13 +1,15 @@
 :root {
   color-scheme: light;
-  --paper: #f8f7f4;
-  --ink: #292c29;
-  --muted: #74766f;
-  --line: #ddded6;
-  --accent: #61765a;
-  --body: #62665e;
-  --hover: #efefe8;
-  --selection: #dce4d5;
+  --paper: #f3e9d9;
+  --ink: #493729;
+  --muted: #7e6855;
+  --line: #d9c6ac;
+  --accent: #945337;
+  --body: #6b5544;
+  --hover: #e8d8bf;
+  --selection: #dfc6a1;
+  --vignette-middle: rgb(65 38 19 / 5%);
+  --vignette-edge: rgb(65 38 19 / 15%);
   font-family: "Cascadia Code", "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   color: var(--ink);
   background: var(--paper);
@@ -17,6 +19,14 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(ellipse at 50% 42%, transparent 28%, var(--vignette-middle) 65%, var(--vignette-edge) 100%);
+}
 ::selection { background: var(--selection); }
 main { width: min(100% - 64px, 560px); margin: 0 auto; padding: clamp(48px, 11vh, 112px) 0 40px; }
 .masthead { display: flex; align-items: center; justify-content: flex-end; margin-bottom: 76px; }
@@ -48,14 +58,16 @@ a:focus-visible, .theme-control:has(input:focus-visible) { outline: 2px solid va
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --paper: #191c1a;
-    --ink: #e6e9e3;
-    --muted: #a0a79e;
-    --line: #363c36;
-    --accent: #a5bc98;
-    --body: #bcc3b9;
-    --hover: #242a24;
-    --selection: #3d5137;
+    --paper: #2d251f;
+    --ink: #f0dfc7;
+    --muted: #c5ab8c;
+    --line: #524234;
+    --accent: #dfa783;
+    --body: #d5bea3;
+    --hover: #3d3026;
+    --selection: #705039;
+    --vignette-middle: rgb(18 10 5 / 16%);
+    --vignette-edge: rgb(18 10 5 / 48%);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -63,27 +75,31 @@ a:focus-visible, .theme-control:has(input:focus-visible) { outline: 2px solid va
   .sun, :root:has(#theme:checked) .moon { display: block; }
   :root:has(#theme:checked) {
   color-scheme: light;
-  --paper: #f8f7f4;
-  --ink: #292c29;
-  --muted: #74766f;
-  --line: #ddded6;
-  --accent: #61765a;
-  --body: #62665e;
-  --hover: #efefe8;
-  --selection: #dce4d5;
+  --paper: #f3e9d9;
+  --ink: #493729;
+  --muted: #7e6855;
+  --line: #d9c6ac;
+  --accent: #945337;
+  --body: #6b5544;
+  --hover: #e8d8bf;
+  --selection: #dfc6a1;
+  --vignette-middle: rgb(65 38 19 / 5%);
+  --vignette-edge: rgb(65 38 19 / 15%);
   }
 }
 @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
   :root:has(#theme:checked) {
   color-scheme: dark;
-  --paper: #191c1a;
-  --ink: #e6e9e3;
-  --muted: #a0a79e;
-  --line: #363c36;
-  --accent: #a5bc98;
-  --body: #bcc3b9;
-  --hover: #242a24;
-  --selection: #3d5137;
+  --paper: #2d251f;
+  --ink: #f0dfc7;
+  --muted: #c5ab8c;
+  --line: #524234;
+  --accent: #dfa783;
+  --body: #d5bea3;
+  --hover: #3d3026;
+  --selection: #705039;
+  --vignette-middle: rgb(18 10 5 / 16%);
+  --vignette-edge: rgb(18 10 5 / 48%);
   }
 }
 footer { display: flex; align-items: center; gap: 8px; margin-top: 35px; font-size: 10px; line-height: 1.8; color: var(--muted); }
