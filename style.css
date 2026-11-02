@@ -59,11 +59,11 @@ a:focus-visible, .theme-control:has(input:focus-visible) { outline: 2px solid va
   :root:not([data-theme]):not(:has(#theme:checked)) {
   color-scheme: dark;
   --paper: #2d251f;
-  --ink: #f0dfc7;
-  --muted: #c5ab8c;
+  --ink: #fff0db;
+  --muted: #d9c1a2;
   --line: #524234;
-  --accent: #dfa783;
-  --body: #d5bea3;
+  --accent: #efba96;
+  --body: #ecd8bf;
   --hover: #3d3026;
   --selection: #705039;
   --vignette-middle: rgb(18 10 5 / 16%);
@@ -93,11 +93,11 @@ a:focus-visible, .theme-control:has(input:focus-visible) { outline: 2px solid va
   :root:not([data-theme]):has(#theme:checked) {
   color-scheme: dark;
   --paper: #2d251f;
-  --ink: #f0dfc7;
-  --muted: #c5ab8c;
+  --ink: #fff0db;
+  --muted: #d9c1a2;
   --line: #524234;
-  --accent: #dfa783;
-  --body: #d5bea3;
+  --accent: #efba96;
+  --body: #ecd8bf;
   --hover: #3d3026;
   --selection: #705039;
   --vignette-middle: rgb(18 10 5 / 16%);
@@ -124,11 +124,11 @@ a:focus-visible, .theme-control:has(input:focus-visible) { outline: 2px solid va
 :root[data-theme="dark"] {
   color-scheme: dark;
   --paper: #2d251f;
-  --ink: #f0dfc7;
-  --muted: #c5ab8c;
+  --ink: #fff0db;
+  --muted: #d9c1a2;
   --line: #524234;
-  --accent: #dfa783;
-  --body: #d5bea3;
+  --accent: #efba96;
+  --body: #ecd8bf;
   --hover: #3d3026;
   --selection: #705039;
   --vignette-middle: rgb(18 10 5 / 16%);
