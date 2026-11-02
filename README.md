@@ -2,7 +2,7 @@
 
 A quiet personal bio page for Lucio Paiva. Plain HTML and CSS; no build step, dependencies, analytics, or external fonts.
 
-The theme follows the system preference by default. An accessible sun/moon checkbox toggles to the opposite theme using CSS `:has()` without JavaScript. The icon shows the theme you can switch to. Manual choices are not stored across visits. The toggle requires a modern browser; system preference still works without `:has()` support. All icons are inline SVG with no external requests.
+The theme follows the system preference until you choose light or dark. A small script stores your choice in localStorage and restores it before styles load. If storage is unavailable, switching still works for the current visit. The CSS toggle also works without JavaScript. All icons are inline SVG with no external requests.
 
 ## Preview locally
 
@@ -18,6 +18,7 @@ Open http://127.0.0.1:4173.
 
 - `index.html`: biography and contact links.
 - `style.css`: layout, colors, and responsive styles.
+- `theme.js`: theme selection and persistence.
 - `favicon.svg`: browser icon.
 
 ## Hosting

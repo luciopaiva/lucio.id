@@ -9,7 +9,14 @@
     <title>Lucio Paiva — Systems architect</title>
     <link rel="canonical" href="https://lucio.id/">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <script>
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <link rel="stylesheet" href="./style.css">
+    <script src="./theme.js" defer></script>
   </head>
   <body>
     <main>
