@@ -19,9 +19,7 @@
 body { margin: 0; }
 ::selection { background: var(--selection); }
 main { width: min(100% - 64px, 560px); margin: 0 auto; padding: clamp(48px, 11vh, 112px) 0 40px; }
-.masthead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 76px; }
-.monogram { font-size: 22px; font-weight: 600; letter-spacing: -1px; }
-.monogram span { color: var(--accent); }
+.masthead { display: flex; align-items: center; justify-content: flex-end; margin-bottom: 76px; }
 .site-name, .eyebrow, footer { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
 .site-name { font-size: 12px; color: var(--muted); }
 .eyebrow { font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--accent); margin: 0 0 18px; }
